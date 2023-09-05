@@ -1,0 +1,16 @@
+#ifndef __TYPE_STATE__
+#define __TYPE_STATE__
+
+enum StateType
+{
+    WELCOME,
+    USER_INTERACTION,
+    MAKING_DRINK,
+    RETRIEVING_DRINK,
+    MACHINE_IDLE,
+    MACHINE_SLEEP,
+    MACHINE_TEST,
+    MACHINE_ASSISTANCE_MODALITY
+};
+
+#endif
