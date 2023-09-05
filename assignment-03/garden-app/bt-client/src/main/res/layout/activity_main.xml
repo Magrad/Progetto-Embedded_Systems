@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:divider="@android:color/transparent"
+    android:outlineProvider="none"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/smartGarden"
+        android:layout_width="300dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
+        android:layout_weight="1"
+        android:gravity="fill"
+        android:text="SmartGarden"
+        android:textColor="#000"
+        android:textSize="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <ImageButton
+        android:id="@+id/alarmBtn"
+        android:tag="alarm"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="20dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="systemAlarm"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:tint="#4CAF50"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/smartGarden"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.029"
+        app:srcCompat="@android:drawable/ic_popup_reminder" />
+
+    <EditText
+        android:id="@+id/lightSystemTxt"
+        android:layout_width="350dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="20dp"
+        android:clickable="false"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Light System"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.463"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/smartGarden"
+        app:layout_constraintVertical_bias="0.039" />
+
+    <TextView
+        android:id="@+id/led_0_txt"
+        android:layout_width="96dp"
+        android:layout_height="48dp"
+        android:gravity="fill"
+        android:text="Led 1"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lightSystemTxt"
+        app:layout_constraintVertical_bias="0.031" />
+
+    <Button
+        android:id="@+id/led_0_btn"
+        android:tag="led_0"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#2196F3"
+        android:checked="true"
+        android:text="ON/OFF"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/led_0_txt"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/led_1_txt"
+        android:layout_width="96dp"
+        android:layout_height="48dp"
+        android:gravity="fill"
+        android:text="Led 2"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/led_0_btn"
+        app:layout_constraintVertical_bias="0.062" />
+
+    <Button
+        android:id="@+id/led_1_btn"
+        android:tag="led_1"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#2196F3"
+        android:checked="true"
+        android:text="ON/OFF"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/led_1_txt"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/led_2_txt"
+        android:layout_width="68dp"
+        android:layout_height="42dp"
+        android:gravity="fill"
+        android:text="Led 3"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.188"
+        app:layout_constraintStart_toEndOf="@+id/led_0_txt"
+        app:layout_constraintTop_toBottomOf="@+id/lightSystemTxt"
+        app:layout_constraintVertical_bias="0.036" />
+
+    <Button
+        android:id="@+id/led_2_brightness_up_btn"
+        android:layout_width="48dp"
+        android:layout_height="39dp"
+        android:backgroundTint="#2196F3"
+        android:checked="true"
+        android:tag="led_2_brightness_up"
+        android:text="+"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/irrigationSystem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/led_2_txt"
+        app:layout_constraintVertical_bias="0.074" />
+
+    <Button
+        android:id="@+id/led_3_brightness_up_btn"
+        android:tag="led_3_brightness_up"
+        android:layout_width="48dp"
+        android:layout_height="39dp"
+        android:backgroundTint="#2196F3"
+        android:checked="true"
+        android:text="+"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/irrigationSystem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.852"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lightSystemTxt"
+        app:layout_constraintVertical_bias="0.313" />
+
+    <TextView
+        android:id="@+id/led_2_brightness_txt"
+        android:layout_width="96dp"
+        android:layout_height="48dp"
+        android:gravity="fill"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/irrigationSystem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lightSystemTxt"
+        app:layout_constraintVertical_bias="0.649" />
+
+    <Button
+        android:id="@+id/led_2_brightness_down_btn"
+        android:tag="led_2_brightness_down"
+        android:layout_width="48dp"
+        android:layout_height="39dp"
+        android:backgroundTint="#2196F3"
+        android:checked="true"
+        android:text="-"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/irrigationSystem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lightSystemTxt"
+        app:layout_constraintVertical_bias="0.877" />
+
+    <Button
+        android:id="@+id/led_3_brightness_down_btn"
+        android:tag="led_3_brightness_down"
+        android:layout_width="48dp"
+        android:layout_height="39dp"
+        android:backgroundTint="#2196F3"
+        android:checked="true"
+        android:text="-"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/irrigationSystem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.852"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lightSystemTxt"
+        app:layout_constraintVertical_bias="0.877" />
+
+    <TextView
+        android:id="@+id/led_3_brightness_txt"
+        android:layout_width="96dp"
+        android:layout_height="48dp"
+        android:gravity="fill"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/irrigationSystem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.924"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lightSystemTxt"
+        app:layout_constraintVertical_bias="0.649" />
+
+    <TextView
+        android:id="@+id/led_3_txt"
+        android:layout_width="68dp"
+        android:layout_height="42dp"
+        android:gravity="fill"
+        android:text="Led 4"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/led_2_txt"
+        app:layout_constraintTop_toBottomOf="@+id/lightSystemTxt"
+        app:layout_constraintVertical_bias="0.036" />
+
+    <EditText
+        android:id="@+id/irrigationSystem"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:clickable="false"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Irrigation System"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.463"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/led_1_btn"
+        app:layout_constraintVertical_bias="0.096" />
+
+    <Button
+        android:id="@+id/irrigation_OnOff_btn"
+        android:tag="irrigation"
+        android:layout_width="152dp"
+        android:layout_height="48dp"
+        android:backgroundTint="#2196F3"
+        android:checked="true"
+        android:text="Open/Close"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0463"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/irrigationSystem"
+        app:layout_constraintVertical_bias="0.117" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.913"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/irrigationSystem"
+        app:layout_constraintVertical_bias="0.142">
+
+        <Button
+            android:id="@+id/irrigation_down_btn"
+            android:tag="irrigation_down"
+            android:layout_width="48dp"
+            android:layout_height="40dp"
+            android:backgroundTint="#2196F3"
+            android:checked="true"
+            android:text="-"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:id="@+id/irrigation_txt"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:gravity="fill"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="17dp" />
+
+        <Button
+            android:id="@+id/irrigation_up_btn"
+            android:tag="irrigation_up"
+            android:layout_width="48dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="#2196F3"
+            android:checked="true"
+            android:text="+"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/manualControl_btn"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:backgroundTint="#2196F3"
+        android:checked="true"
+        android:text="Require Manual Control"
+        android:textAllCaps="false"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/irrigationSystem"
+        app:layout_constraintVertical_bias="0.919" />
+
+</android.support.constraint.ConstraintLayout>
