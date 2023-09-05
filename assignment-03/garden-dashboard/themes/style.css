@@ -1,0 +1,171 @@
+* {
+    font-family: "Montserrat";
+    font-size: 16px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+body {
+    background-color: rgba(244, 243, 239, 100);
+}
+
+.component, .alarm {
+    float: left;
+    align-items: center;
+    padding: 1.5em;
+    border-radius: 15px;
+    margin: 0 5% 5% 8%;
+    width: 300px;
+    height: 80%;
+    position: relative;
+    background-color: white;
+}
+
+.alarm .idname {
+    display: flex;
+}
+
+.alarm .state-ALARM {
+    color: red;
+}
+
+.alarm img {
+    position: absolute;
+    margin: -19% 0 0 70%;
+    width: 64px;
+    height: 64px;
+}
+
+.alarm .idname h3 {
+    margin-right: 5%;
+}
+
+.component .idname {
+    display: flex;
+}
+
+.component .idname h3 {
+    margin-right: 5%;
+    font-size: 23px;
+}
+
+.component img {
+    position: absolute;
+    margin: -20% 0 0 70%;
+    width: 64px;
+    height: 64px;
+}
+
+.component .state {
+    display: flex;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.component .state p {
+    margin-right: 60%;
+}
+
+.checkbox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-bottom: .5em;
+}
+
+.off::before {
+    content: "";
+    width: 5em;
+    height: 2.5em;
+    background-color: hsl(0, 80%, 90%);
+    border-radius: 2.5em;
+    margin-right: .625em;
+}
+
+.on::before {
+    content: "";
+    width: 5em;
+    height: 2.5em;
+    background-color: hsl(100, 70%, 90%);
+    border-radius: 2.5em;
+    margin-right: .625em;
+}
+
+.off::after {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    content: "\2715";
+    font-size: 1.25em;
+    left: .10em;
+    width: 1.8em;
+    height: 1.8em;
+    background-color: hsl(0, 80%, 60%);
+    color: white;
+    border-radius: 1em;
+    animation: check-fade-reverse 500ms ease-in-out forwards;
+}
+
+.on::after {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    content: "\2713";
+    font-size: 1.25em;
+    left: 2em;
+    width: 1.8em;
+    height: 1.8em;
+    background-color: hsl(100, 70%, 60%);
+    color: white;
+    border-radius: 1em;
+    animation: check-fade 500ms ease-in-out forwards;
+}
+
+@keyframes check-fade {
+    0% {
+        opacity: 1;
+        content: "\2715";
+    }
+
+    50% {
+        opacity: 0;
+        
+    }
+
+    0% {
+        opacity: 1;
+        content: "\2713";
+    }
+}
+
+@keyframes check-fade-reverse {
+    0% {
+        opacity: 1;
+        content: "\2713";
+    }
+
+    50% {
+        opacity: 0;
+        
+    }
+
+    0% {
+        opacity: 1;
+        content: "\2715";
+    }
+}
+
+.component .intensity {
+    display: flex;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.component .intensity p {
+    margin-right: 65%;
+}
